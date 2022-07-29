@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Lise Mari Lorentzen - portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/221e020579.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg p-0">
+    <div class="container-fluid" id="navContainer">
+        <a class="navbar-logo" href="#"> logo her
+            <img src="//" alt="" width="30" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end pt-1 pe-3" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-tabs">
+                <li class="nav-item pt-2 mx-3 mx-lg-3">
+                    <a class="nav-link py-3 px-0 px-lg-3" aria-current="page" href="index.html"> Hjem</a>
+                </li>
+                <li class="nav-item activeli pt-2 mx-3 mx-lg-3">
+                    <a class="nav-link active  py-3 px-0 px-lg-3" href="omMeg.html"> Om meg</a>
+                </li>
+                <li class="nav-item pt-2 mx-3 mx-lg-3">
+                    <a class="nav-link  py-3 px-0 px-lg-3" href="#"> Utdanning</a>
+                </li>
+                <li class="nav-item dropdown pt-2 mx-3 mx-lg-3">
+                    <a class="nav-link dropdown-toggle  py-3 px-0 px-lg-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Prosjekter
+                    </a>
+                    <ul class="dropdown-menu bg-light rounded-1 pe-2">
+                        <li><a class="dropdown-item" href="#"> project x </a></li>
+                        <li><a class="dropdown-item" href="#"> project x </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--- forside --->
+
+<div class="container d-flex align-items-center  flex-column">
+    <img class="bakgrunnsbilde" src="" alt="...">
+    <!-- legg inn alt-tekst på bilder-->
+    <p class="h1">Om meg</p>
+    <p> bli litt kjent med meg!</p>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 p-3 align-items-center">
+        <p>
+            Hei! Jeg heter Lise. Jeg er 28 år, fra Tromsø men bor og studerer i Oslo. Våren 2023 er jeg ferdig med en
+            bachelor i informasjonsteknologi ved OsloMet og skal ut i arbeidslivet. <br>
+            Jeg har derfor laget denne siden som en liten portefølje til potensielle arbeidsgivere.
+            <br><br>
+            Jeg har alltid vært samfunnsengasjert, og har vært aktiv i en rekke organisasjoner i min ungdomstid.
+            Det er viktig for meg å finne en jobb der jeg føler jeg kan gjøre en forskjell,
+            da det er min motivasjon og drivkraft.
+            <br>Jeg har jobbet som barista gjennom studietiden, og er glad i god mat og god kaffe.
+            Som IT-studenter flest liker jeg å game, mine favorittspill for tiden er Valheim, Life is Strange og Animal Crossing.
+           <br><br>
+            Jeg har lyst til å flytte nærmere familie, og er derfor i utgangspunktet ute etter jobb i Stavanger-området,
+            men jeg er åpen for andre muligheter. Det viktigste for meg er et godt arbeidsmiljø der jeg føler at jeg satses på
+            og der jeg kan utvikle meg selv gjennom læring og faglig utfordring.
+        </p>
+        </div>
+        <div class="col-sm-6"> bilde her
+        <img src="P1010553.JPG" class="float-end img-fluid max-width: 100%" alt="Bilde av meg">
+        </div>
+    </div>
+</div>
+
+<!--- //popper and js modules --->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+<!-- fixed-bottom  position-fixed (footer følger med når man scroller,nå ligger den fast nederst)-->
+<footer class="bg-light text-center ">
+    <div class="container-fluid" id="footerContainer">
+
+        <div class="row p-4">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0 pt-2">
+            <h6> Om nettsiden</h6>
+                <p> Denne nettsiden er bygd av meg i bootstrap 5, HTML og CSS</p>
+                <p> Det er fokusert på tilstrekkelig kontrast og aria-merking for å gjøre nettsiden tilgjengelig for alle</p>
+            </div> <!--column 1-->
+
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0 pt-2">
+            <h6> Kontakt meg </h6>
+
+                <div class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-facebook-f"></i
+                    ></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-linkedin-in"></i
+                    ></a>
+
+                    <!-- Github -->
+                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-github"></i
+                    ></a>
+                </div>
+            </div>   <!--column 2-->
+
+        </div>   <!-- row-->
+
+    </div> <!-- footer container -->
+</footer>
+</html>

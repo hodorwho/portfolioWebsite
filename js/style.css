@@ -1,0 +1,53 @@
+.rowspecial {
+    background-color: lightcyan;
+}
+
+.container {
+/*    background-color: #e5c7ca; */
+}
+
+.container-fluid {
+    background-color: #e6fed6;
+}
+
+#footerContainer {
+    background-color: lightskyblue;
+}
+
+#navContainer {
+    background-color: lightskyblue;
+}
+
+.navbar {
+    background-color: lightskyblue;
+}
+
+.nav-link {
+    color: white;
+}
+
+/* navbaren som kommer på små skjermer
+prøver å gjøre så det ikke er tabbing på mobilversjonen for det ser rart ut
+men sliter med å få fjerna bakgrunnen på mobilmenyen. vil også
+ha mobilmenyen større*/
+
+.navbar-collapse {
+/*    background-color: blue;
+*/
+--bs-nav-tabs-link-active-bg: blue;
+}
+
+/*.navbar-nav {
+    color: white;
+    --bs-navbar-color: white;
+    --bs-navbar-active-color: black;
+    --bs-navbar-hover-color: yellow;
+    --bs-navbar-disabled-color: lightblue;
+}
+
+.activeli {
+    border: 2px solid white;
+    background-color: #e6fed6;
+    padding-bottom: 0px;
+}
+*/
