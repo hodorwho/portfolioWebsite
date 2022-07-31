@@ -1,6 +1,17 @@
+
+body {
+    min-height: 100%;
+    background-color: #F5FEEF;
+}
+
+p {
+    font-family: sans-serif;
+}
+
 .rowspecial {
     background-color: lightcyan;
 }
+/* rowspecial er nå bare de ubrukte radene i index*/
 
 .container {
 /*    background-color: #e5c7ca; */
@@ -12,6 +23,7 @@
 
 #footerContainer {
     background-color: lightskyblue;
+    border-top: #c2e2f6 3px solid;
 }
 
 #navContainer {
@@ -21,9 +33,28 @@
 .navbar {
     background-color: lightskyblue;
 }
-
+ /* hva gjør denne?*/
 .nav-link {
-    color: white;
+    font-weight: bold;
+}
+
+#active{
+    background-color: #F5FEEF;
+    border-bottom-color: #F5FEEF;
+}
+
+/* justering av collapsable nav for små+medium skjermer */
+@media only screen and (max-width: 992px) {
+    #active {
+        background-color: #B0DCF8;
+        border-top: 4px solid #0c63e4;
+        border-bottom: 4px solid #0c63e4;
+        border-style: double;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
 }
 
 /* navbaren som kommer på små skjermer
