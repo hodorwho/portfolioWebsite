@@ -2,16 +2,35 @@
 body {
     min-height: 100%;
     background-color: #F5FEEF;
+    background-color: black;
 }
 
-p {
-    font-family: sans-serif;
+.row {
+    background-color: #F5FEEF;
+    padding: 5px;
+}
+
+p, H2, H3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.h1 {
+    color: #F5FEEF;
+}
+
+.fa-bars {
+    color: white;
 }
 
 .rowspecial {
     background-color: lightcyan;
 }
 /* rowspecial er nå bare de ubrukte radene i index*/
+
+.navbar-toggler{
+    background-color: black;
+    border-color: white;
+}
 
 .container {
 /*    background-color: #e5c7ca; */
@@ -21,13 +40,23 @@ p {
     background-color: #e6fed6;
 }
 
-#footerContainer {
-    background-color: lightskyblue;
-    border-top: #c2e2f6 3px solid;
+.bg-image {
+    background-image: url("jeremy-perkins-space.jpg");
+    background-size: cover;
 }
 
+#footerContainer {
+    background-color: #F5FEEF;
+    border-top: #c2e2f6 3px solid;
+    border-top: lightgreen 3px solid;
+    bottom: 0;
+    margin-top: auto;
+}
+/* bakgrunn her endret til svart, ment for forsiden men er på alle nå*/
 #navContainer {
-    background-color: lightskyblue;
+  /*  background-color: lightskyblue;
+    background-color: #F5FEEF; */
+    background-color: #000000;
 }
 
 .navbar {
@@ -38,22 +67,54 @@ p {
     font-weight: bold;
 }
 
+.activeli{
+    /* gjør noe kult her så man ser hvilken side man er på, active er elementet, activeli rundt/større
+    prøv å lag et bakgrunnsbilde som er farget som man legger som bakgrunn bak knappen */
+}
+
+#hjemLi {
+    background-image: url("bluecloud.png");
+    background-size: 100% 100%;
+}
+
+#omMegLi {
+    background-image: url("pinkcloud.png");
+    background-size: 100% 100%;
+}
+
+#UtdanningLi {
+    background-image: url("orangecloud.png");
+    background-size: 100% 100%;
+}
+
+#ProsjekterLi {
+    background-image: url("purplecloud.png");
+    background-size: 100% 100%;
+}
+
+
+/*
 #active{
     background-color: #F5FEEF;
     border-bottom-color: #F5FEEF;
 }
+*/
 
 /* justering av collapsable nav for små+medium skjermer */
 @media only screen and (max-width: 992px) {
-    #active {
-        background-color: #B0DCF8;
-        border-top: 4px solid #0c63e4;
-        border-bottom: 4px solid #0c63e4;
-        border-style: double;
+    /* det aktive elementet i collapsed navbar*/
+    #omMegLi #active {
     }
 
     .nav-link {
         text-align: center;
+    }
+
+    .navbar-collapse {
+        padding-bottom: 10px;
+    }
+   .collapse.show {
+       border-bottom: #c2e2f6 3px solid;
     }
 }
 
