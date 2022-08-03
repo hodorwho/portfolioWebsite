@@ -1,12 +1,28 @@
 
 body {
     min-height: 100%;
-    background-color: #F5FEEF;
-    background-color: black;
+ /*   background-color: #F5FEEF;
+    background-color: black; */
+    position: relative;
 }
 
+/*
 .row {
     background-color: #F5FEEF;
+    border: 5px solid green;
+    border-style: inset;
+    padding: 5px;
+}
+
+
+.mainrow {
+    padding: 5px;
+} */
+
+.maincontainer {
+    background-color: #F5FEEF;
+    border: 5px solid silver;
+    border-style: inset;
     padding: 5px;
 }
 
@@ -36,6 +52,17 @@ p, H2, H3 {
 /*    background-color: #e5c7ca; */
 }
 
+/* bakgrunn kommer ikke opp?*/
+#footerContainer {
+    background-color: black;
+    border-top: lightgreen 3px solid;
+    bottom: 0;
+    margin-top: auto;
+    color: white;
+
+ /*   background-color: #F5FEEF; */
+}
+
 .container-fluid {
     background-color: #e6fed6;
 }
@@ -45,32 +72,42 @@ p, H2, H3 {
     background-size: cover;
 }
 
-#footerContainer {
-    background-color: #F5FEEF;
-    border-top: #c2e2f6 3px solid;
-    border-top: lightgreen 3px solid;
-    bottom: 0;
-    margin-top: auto;
-}
-/* bakgrunn her endret til svart, ment for forsiden men er på alle nå*/
+/* endre bakgrunn her til gjennomsiktig og legg navbar over bakgrunnsbildet så det ikke er over. */
 #navContainer {
   /*  background-color: lightskyblue;
     background-color: #F5FEEF; */
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0);
+    background-color: black;
 }
 
-.navbar {
-    background-color: lightskyblue;
-}
- /* hva gjør denne?*/
 .nav-link {
     font-weight: bold;
+}
+
+#tilToppen {
+    position: fixed;
+    bottom: 10rem;
+    right: 1rem;
+    border-radius: 100%;
+    width: 80px;
+    color: red;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*margin-bottom: -14rem; */
+    transition: margin-bottom 0.2s;
+}
+
+#tilToppen.active {
+    margin-bottom: 0;
 }
 
 .activeli{
     /* gjør noe kult her så man ser hvilken side man er på, active er elementet, activeli rundt/større
     prøv å lag et bakgrunnsbilde som er farget som man legger som bakgrunn bak knappen */
 }
+
 
 #hjemLi {
     background-image: url("bluecloud.png");
@@ -82,12 +119,12 @@ p, H2, H3 {
     background-size: 100% 100%;
 }
 
-#UtdanningLi {
+#utdanningLi {
     background-image: url("orangecloud.png");
     background-size: 100% 100%;
 }
 
-#ProsjekterLi {
+#prosjekterLi {
     background-image: url("purplecloud.png");
     background-size: 100% 100%;
 }
