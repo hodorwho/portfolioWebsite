@@ -4,6 +4,7 @@ body {
  /*   background-color: #F5FEEF;
     background-color: black; */
     position: relative;
+    background-color: black;
 }
 
 /*
@@ -21,8 +22,7 @@ body {
 
 .maincontainer {
     background-color: #F5FEEF;
-    border: 5px solid silver;
-    border-style: inset;
+    background-color: black;
     padding: 5px;
 }
 
@@ -39,19 +39,21 @@ p, H2, H3 {
 }
 
 .rowspecial {
-    background-color: lightcyan;
+/*  background-color: lightcyan; */
 }
-/* rowspecial er nå bare de ubrukte radene i index*/
+/* rowspecial er nå bare de ubrukte radene i index
 
 .navbar-toggler{
-    background-color: black;
-    border-color: white;
+ background-color: black;
+ border-color: white;
+ color: white;
 }
+
 
 .container {
-/*    background-color: #e5c7ca; */
+/*    background-color: #e5c7ca;
 }
-
+*/
 /* bakgrunn kommer ikke opp?*/
 #footerContainer {
     background-color: black;
@@ -63,8 +65,11 @@ p, H2, H3 {
  /*   background-color: #F5FEEF; */
 }
 
+/* ytterste container for feltene men også tekstfelt*/
 .container-fluid {
     background-color: #e6fed6;
+  /*  background-color: grey; */
+    color: black;
 }
 
 .bg-image {
@@ -72,35 +77,89 @@ p, H2, H3 {
     background-size: cover;
 }
 
-/* endre bakgrunn her til gjennomsiktig og legg navbar over bakgrunnsbildet så det ikke er over. */
+/* container rundt nav */
 #navContainer {
   /*  background-color: lightskyblue;
     background-color: #F5FEEF; */
-    background-color: rgba(0, 0, 0, 0);
-    background-color: black;
 }
 
 .nav-link {
     font-weight: bold;
 }
 
+nav.sticky {
+    padding: 3px 1px;
+    background: black;
+    transition: 0.2s;
+}
+
+#pilNed {
+    bottom: 0;
+    position: absolute;
+}
+
+/* i utdanning, åpner et tekstfelt */
+
+.sidedeler {
+    border-top: #6610f2 2px solid;
+}
+
+/* div rundt knappen */
+.fagRow {
+    text-align: center;
+}
+
+/*knappen som åpner feltet */
+#seFag {
+    background: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+#fagSeksjon {
+
+}
+
+#pil {
+    border: solid #6610f2;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    color: #6610f2;
+}
+
+/* styling av til toppen -knappen */
 #tilToppen {
+    opacity: 0; /* hide it */
+    z-index: 99;
+    outline: none;
+    cursor: pointer;
+    background-image: url("greencloud.png");
+    background-size: contain;
+    background-color: black;
+    background-repeat: no-repeat;
     position: fixed;
-    bottom: 10rem;
+    bottom: 5rem;
     right: 1rem;
     border-radius: 100%;
-    width: 80px;
-    color: red;
+    width: 90px;
+    color: black;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*margin-bottom: -14rem; */
-    transition: margin-bottom 0.2s;
+    /*margin-bottom: -14rem;
+    transition: margin-bottom 0.2s; */
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 #tilToppen.active {
     margin-bottom: 0;
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
 }
 
 .activeli{
@@ -155,28 +214,3 @@ p, H2, H3 {
     }
 }
 
-/* navbaren som kommer på små skjermer
-prøver å gjøre så det ikke er tabbing på mobilversjonen for det ser rart ut
-men sliter med å få fjerna bakgrunnen på mobilmenyen. vil også
-ha mobilmenyen større*/
-
-.navbar-collapse {
-/*    background-color: blue;
-*/
---bs-nav-tabs-link-active-bg: blue;
-}
-
-/*.navbar-nav {
-    color: white;
-    --bs-navbar-color: white;
-    --bs-navbar-active-color: black;
-    --bs-navbar-hover-color: yellow;
-    --bs-navbar-disabled-color: lightblue;
-}
-
-.activeli {
-    border: 2px solid white;
-    background-color: #e6fed6;
-    padding-bottom: 0px;
-}
-*/
