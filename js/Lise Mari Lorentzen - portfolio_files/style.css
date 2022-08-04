@@ -1,0 +1,162 @@
+
+body {
+    min-height: 100%;
+ /*   background-color: #F5FEEF;
+    background-color: black; */
+    position: relative;
+
+}
+
+/*
+.row {
+    background-color: #F5FEEF;
+    border: 5px solid green;
+    border-style: inset;
+    padding: 5px;
+}
+
+
+.mainrow {
+    padding: 5px;
+} */
+
+.maincontainer {
+    background-color: #F5FEEF;
+    border: 5px solid silver;
+    border-style: inset;
+    padding: 5px;
+}
+
+p, H2, H3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.h1 {
+    color: #F5FEEF;
+}
+
+.fa-bars {
+    color: white;
+}
+
+.rowspecial {
+    background-color: lightcyan;
+}
+/* rowspecial er nå bare de ubrukte radene i index
+
+.navbar-toggler{
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+
+
+.container {
+/*    background-color: #e5c7ca; */
+}
+
+/* bakgrunn kommer ikke opp?*/
+#footerContainer {
+    background-color: black;
+    border-top: lightgreen 3px solid;
+    bottom: 0;
+    margin-top: auto;
+    color: white;
+
+ /*   background-color: #F5FEEF; */
+}
+
+.container-fluid {
+    background-color: #e6fed6;
+}
+
+.bg-image {
+    background-image: url("jeremy-perkins-space.jpg");
+    background-size: cover;
+}
+
+/* container rundt nav */
+#navContainer {
+  /*  background-color: lightskyblue;
+    background-color: #F5FEEF; */
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+nav.sticky {
+    padding: 3px 1px;
+    background: black;
+}
+
+#tilToppen {
+    position: fixed;
+    bottom: 10rem;
+    right: 1rem;
+    border-radius: 100%;
+    width: 80px;
+    color: red;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*margin-bottom: -14rem; */
+    transition: margin-bottom 0.2s;
+}
+
+#tilToppen.active {
+    margin-bottom: 0;
+}
+
+.activeli{
+    /* gjør noe kult her så man ser hvilken side man er på, active er elementet, activeli rundt/større
+    prøv å lag et bakgrunnsbilde som er farget som man legger som bakgrunn bak knappen */
+}
+
+
+#hjemLi {
+    background-image: url("bluecloud.png");
+    background-size: 100% 100%;
+}
+
+#omMegLi {
+    background-image: url("pinkcloud.png");
+    background-size: 100% 100%;
+}
+
+#utdanningLi {
+    background-image: url("orangecloud.png");
+    background-size: 100% 100%;
+}
+
+#prosjekterLi {
+    background-image: url("purplecloud.png");
+    background-size: 100% 100%;
+}
+
+
+/*
+#active{
+    background-color: #F5FEEF;
+    border-bottom-color: #F5FEEF;
+}
+*/
+
+/* justering av collapsable nav for små+medium skjermer */
+@media only screen and (max-width: 992px) {
+    /* det aktive elementet i collapsed navbar*/
+    #omMegLi #active {
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        padding-bottom: 10px;
+    }
+   .collapse.show {
+       border-bottom: #c2e2f6 3px solid;
+    }
+}
