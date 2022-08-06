@@ -30,8 +30,21 @@ p, H2, H3 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h3 {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 8px;
+}
+
 .h1 {
     color: #F5FEEF;
+}
+
+/*samme bredde på alle tekstfelt*/
+.col {
+/*    min-width: 75%;*/
+    width: auto;
+
 }
 
 .fa-bars {
@@ -69,6 +82,7 @@ p, H2, H3 {
 .container-fluid {
     background-color: #e6fed6;
     background-color: #c3a4cb;
+    background-color: #c49fd7;
   /*  background-color: grey; */
     color: black;
 }
@@ -102,6 +116,7 @@ nav.sticky {
 /* neon-lilla sidedeler*/
 .sidedeler {
     border-top: #6610f2 2px solid;
+    border-top-width: 3px;
 }
 
 /* rammer inn elementer (tekst og bilder)*/
@@ -112,20 +127,6 @@ nav.sticky {
             0 0 14px 0px #0ff; /* outer cyan */
 }
 
-#tilToppen {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    box-shadow:
-            inset 0 0 50px #fff,      /* inner white */
-            inset 20px 0 80px #f0f,   /* inner left magenta short */
-            inset -20px 0 80px #0ff,  /* inner right cyan short */
-            inset 20px 0 300px #f0f,  /* inner left magenta broad */
-            inset -20px 0 300px #0ff, /* inner right cyan broad */
-            0 0 5px #6610f2,            /* outer white */
-            -10px 0 80px #6610f2,        /* outer left magenta */
-            10px 0 80px #6610f2;         /* outer right cyan */
-}
 
 /* fag: i utdanning, åpner et tekstfelt: */
 
@@ -138,6 +139,7 @@ nav.sticky {
 #seFag {
     background: rgba(255, 255, 255, 0);
     color: white;
+    border: none;
 }
 
 #fagSeksjon {
@@ -154,23 +156,39 @@ nav.sticky {
     color: #6610f2;
 }
 
+/* skyggestyling av knappen, mer styling under*/
+#tilToppen {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    box-shadow:
+            inset 0 0 50px #fff,      /* inner white */
+            inset 20px 0 80px #f0f,   /* inner left magenta short */
+            inset -20px 0 80px #0ff,  /* inner right cyan short */
+            inset 20px 0 300px #f0f,  /* inner left magenta broad */
+            inset -20px 0 300px #0ff, /* inner right cyan broad */
+            0 0 5px #6610f2,            /* outer white */
+            -10px 0 80px #6610f2,        /* outer left magenta */
+            10px 0 80px #6610f2;         /* outer right cyan */
+}
+
 /* styling av til toppen -knappen */
 #tilToppen {
     opacity: 0; /* hide it */
     z-index: 99;
-    outline: none;
+    outline: purple;
     cursor: pointer;
     background-image: url("greencloud.png");
     background-size: contain;
     background-color: black;
     background-repeat: no-repeat;
     position: fixed;
-    bottom: 5rem;
+    bottom: 2rem;
     right: 1rem;
     border-radius: 100%;
-    width: 90px;
+    width: 60px;
     color: black;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,7 +253,10 @@ nav.sticky {
         padding-bottom: 10px;
     }
    .collapse.show {
-       border-bottom: #c2e2f6 3px solid;
+       border-bottom: #6610f2 2px solid;
     }
+   .navbar {
+       background-color: black;
+   }
 }
 

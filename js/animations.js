@@ -5,8 +5,8 @@
 let tiltoppen = document.getElementById("tilToppen");
 
 $("#tilToppen").on('click', function() {
-    $(window.scrollTo({top:0, behavior: 'smooth'}))
     tiltoppen.classList.remove("active");
+    $(window.scrollTo({top:0, behavior: 'smooth'}))
 })
 
 /* fra YT-video: sticky navigation bar on scroll using vanilla javascript from online tutorials IKKE TESTET*/
