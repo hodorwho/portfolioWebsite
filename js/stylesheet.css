@@ -1,8 +1,8 @@
 
 body {
     min-height: 100%;
- /*   background-color: #F5FEEF;
-    background-color: black; */
+    /*   background-color: #F5FEEF;
+       background-color: black; */
     position: relative;
     background-color: black;
 }
@@ -42,8 +42,8 @@ h3 {
 
 /*samme bredde på alle tekstfelt*/
 .col {
-/*    min-width: 75%;
-    width: auto;*/
+    /*    min-width: 75%;
+        width: auto;*/
 }
 
 .fa-bars {
@@ -51,7 +51,7 @@ h3 {
 }
 
 .rowspecial {
-/*  background-color: lightcyan; */
+    /*  background-color: lightcyan; */
 }
 /* rowspecial er nå bare de ubrukte radene i index
 
@@ -74,7 +74,7 @@ h3 {
     margin-top: auto;
     color: white;
 
- /*   background-color: #F5FEEF; */
+    /*   background-color: #F5FEEF; */
 }
 
 /* ytterste container for feltene men også tekstfelt*/
@@ -82,8 +82,10 @@ h3 {
     background-color: #e6fed6;
     background-color: #c3a4cb;
     background-color: #c49fd7;
-  /*  background-color: grey; */
-    color: black;
+    background-color: black;
+    color: white;
+    /*  background-color: grey;
+      color: black;*/
 }
 
 .bg-image {
@@ -93,8 +95,8 @@ h3 {
 
 /* container rundt nav */
 #navContainer {
-  /*  background-color: lightskyblue;
-    background-color: #F5FEEF; */
+    /*  background-color: lightskyblue;
+      background-color: #F5FEEF; */
 }
 
 .nav-link {
@@ -153,6 +155,17 @@ nav.sticky {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     color: #6610f2;
+}
+
+#hero {
+    position: absolute;
+    color: #fff;
+    padding: 15rem 25rem;
+    z-index: 0;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
 }
 
 /* skyggestyling av knappen, mer styling under, inspirert av https://codersblock.com/blog/creating-glow-effects-with-css/*/
@@ -225,11 +238,26 @@ nav.sticky {
     background-size: 100% 100%;
 }
 
-#prosjekterLi {
+#ErfaringLi {
     background-image: url("purplecloud.png");
     background-size: 100% 100%;
 }
+/* container rundt kaffekopp-animasjonen*/
+.animasjonsContainer {
+    display: flex;
+    justify-content: center;
 
+}
+/*coffee cup animation */
+.cupOfCoffee {
+    transform: scale(0.6);
+    overflow: visible;
+}
+
+#video {
+    position: fixed;
+    z-index: -1;
+}
 
 /*
 #active{
@@ -251,18 +279,30 @@ nav.sticky {
     .navbar-collapse {
         padding-bottom: 10px;
     }
-   .collapse.show {
-       border-bottom: #6610f2 2px solid;
+    .collapse.show {
+        border-bottom: #6610f2 2px solid;
     }
-   .navbar {
-       background-color: black;
-   }
+    .navbar {
+        background-color: black;
+    }
 
-   /*er i veien på mobil, så jeg vil at den skal sitte over footeren da*/
-   #tilToppen {
-       position: absolute;
-       bottom: 8rem;
-       right: 1.5rem;
-   }
+    /*er i veien på smale skjermer så jeg vil at den skal sitte over footeren da*/
+    #tilToppen {
+        position: absolute;
+        bottom: 8rem;
+        right: 1.5rem;
+    }
+
 }
+/*mobil */
+@media only screen and (max-width: 767px) {
 
+    #video {
+        display: none;
+    }
+
+    .forsidecontainer {
+        background: url("space_Moment.jpg");
+        background-size: cover;
+    }
+}
