@@ -21,8 +21,8 @@ body {
 } */
 
 .maincontainer {
-    background-color: #F5FEEF;
-    background-color: black;
+    /*background-color: black; */
+    background-color: rgba(255, 255, 255, 0);
     padding: 5px;
     padding-top: 68px;
 }
@@ -40,6 +40,11 @@ h3 {
 h1 {
     color: #F5FEEF;
     text-align: center;
+    padding: 1rem;
+}
+
+p {
+
 }
 
 /*samme bredde på alle tekstfelt*/
@@ -57,50 +62,18 @@ h1 {
 
 }
 
-.rowspecial {
-    /*  background-color: lightcyan; */
-}
-/* rowspecial er nå bare de ubrukte radene i index
-*/
 .navbar{
     top: 0;
-    width: 100%;
 }
 /*innenfor body, rundt alt unntatt navbar*/
 wrapper {
-
-}
-
-/*
-.container {
-/*    background-color: #e5c7ca;
-}
-*/
-/* bakgrunn kommer ikke opp?*/
-#footerContainer {
-    background-color: black;
-    border-top: lightgreen 3px solid;
-    bottom: 0;
-    margin-top: auto;
-    color: white;
-
-    /*   background-color: #F5FEEF; */
+    border: 2px solid purple;
 }
 
 /* ytterste container for feltene men også tekstfelt*/
 .container-fluid {
-    background-color: #e6fed6;
-    background-color: #c3a4cb;
-    background-color: #c49fd7;
     background-color: black;
     color: white;
-    /*  background-color: grey;
-      color: black;*/
-}
-
-.bg-image {
-    background-image: url("jeremy-perkins-space.jpg");
-    background-size: cover;
 }
 
 /* container rundt nav */
@@ -116,6 +89,10 @@ wrapper {
 nav.sticky {
     padding: 3px 1px;
     background: black;
+    -webkit-transition:  0.2s;
+    -moz-transition: 0.2s;
+    -o-transition:  0.2s;
+    -ms-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -138,6 +115,13 @@ nav.sticky {
             0 0 14px 0px #0ff; /* outer cyan */
 }
 
+/*prøver å fade border inn når man scroller ned*/
+.elementramme:hover {
+    box-shadow:
+            0 0 6px 0px #fff,
+            0 0 10px 0px #f0f,
+            0 0 14px 0px #0ff;
+}
 
 /* fag: i utdanning, åpner et tekstfelt: */
 
@@ -164,10 +148,6 @@ nav.sticky {
 
 }
 
-#fagSeksjon {
-
-}
-
 #pil {
     border: solid #6610f2;
     border-width: 0 3px 3px 0;
@@ -184,21 +164,27 @@ nav.sticky {
     display: flex;
 }
 
+#video {
+    position: fixed;
+    z-index: -1;
+}
+
 /*Styling av tekst på forsiden */
 .hero {
     justify-content: center;
     align-items: center;
     color: white;
+    font-family: 'Libre Baskerville', Arial, Helvetica, sans-serif;
 }
 
 .hero p {
     font-weight: bold;
-    color: lightblue;
     text-align: center;
 }
 
 .hero h1 {
-
+    font-size: 20vw;
+    color: rgb(194, 226, 246);
 }
 
 /* pil ned på forsiden */
@@ -211,15 +197,12 @@ nav.sticky {
     display: flex;
 }
 .arrowDown {
-    /*transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    */
+    font-size: 52px;
     display: block;
     color: white;
     border-width: 0 3px 3px 0;
     align-self: center;
     padding: 3px;
-  /*  transition: all 0.5s ease; */
 }
 
 .arrowDown:hover {
@@ -228,7 +211,7 @@ nav.sticky {
 }
 
 .arrowDown:active {
-   background-color: purple;
+   color: purple;
     animation: ease-out 5s;
 
 }
@@ -284,11 +267,18 @@ nav.sticky {
     /*margin-bottom: -14rem;
     transition: margin-bottom 0.2s; */
     transition: opacity 0.5s, transform 0.5s;
+    -webkit-transition:  opacity 0.5s, transform 0.5s;
+    -moz-transition:  opacity 0.5s, transform 0.5s;
+    -o-transition:  opacity 0.5s, transform 0.5s;
+    -ms-transition: opacity 0.5s, transform 0.5s;
 }
 
 #tilToppen.active {
     margin-bottom: 0;
     opacity: 1;
+    -webkit-transition:  opacity 1s, transform 1s;
+    -moz-transition:  opacity 1s, transform 1s;
+    -o-transition:  opacity 1s, transform 1s;
     transition: opacity 1s, transform 1s;
     background-color: rgba(255, 255, 255, 0);
     border: none;
@@ -331,18 +321,19 @@ nav.sticky {
     overflow: visible;
 }
 
-#video {
-    position: fixed;
-    z-index: -1;
+
+/*footeren */
+#footerContainer {
+    background-color: black;
+    border-top: lightgreen 3px solid;
+    bottom: 0;
+    margin-top: auto;
+    color: white;
 }
 
-/*
-#active{
-    background-color: #F5FEEF;
-    border-bottom-color: #F5FEEF;
+.footercol {
+    text-align: left;
 }
-*/
-
 
 /* justering av collapsable nav for små+medium skjermer */
 @media only screen and (max-width: 992px) {
@@ -364,11 +355,28 @@ nav.sticky {
         background-color: black;
     }
 
+    .navbar-toggler {
+
+    }
+
+    .togglebutton {
+        font-size: 6vh;
+    }
+
     /*er i veien på smale skjermer så jeg vil at den skal sitte over footeren da*/
     #tilToppen {
         position: absolute;
         bottom: 8rem;
         right: 1.5rem;
+    }
+
+    .forsidecontainer .maincontainer body {
+        background: url("space_Moment.jpg");
+        background-size: cover;
+    }
+
+    .footercol {
+        text-align: center;
     }
 
 }
@@ -379,8 +387,13 @@ nav.sticky {
         display: none;
     }
 
-    .forsidecontainer {
+    .forsidecontainer, .maincontainer{
         background: url("space_Moment.jpg");
         background-size: cover;
+    }
+
+    body {
+        background: url("space_Moment.jpg");
+        background-size: auto;
     }
 }
