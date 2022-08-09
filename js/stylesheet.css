@@ -24,6 +24,7 @@ body {
     background-color: #F5FEEF;
     background-color: black;
     padding: 5px;
+    padding-top: 68px;
 }
 
 p, H2, H3 {
@@ -35,9 +36,10 @@ h3 {
     font-weight: bold;
     padding-top: 8px;
 }
-
-.h1 {
+/*seksjonsoverskrifter*/
+h1 {
     color: #F5FEEF;
+    text-align: center;
 }
 
 /*samme bredde på alle tekstfelt*/
@@ -50,18 +52,26 @@ h3 {
     color: white;
 }
 
+.fa-erf {
+    padding: 20px;
+
+}
+
 .rowspecial {
     /*  background-color: lightcyan; */
 }
 /* rowspecial er nå bare de ubrukte radene i index
+*/
+.navbar{
+    top: 0;
+    width: 100%;
+}
+/*innenfor body, rundt alt unntatt navbar*/
+wrapper {
 
-.navbar-toggler{
- background-color: black;
- border-color: white;
- color: white;
 }
 
-
+/*
 .container {
 /*    background-color: #e5c7ca;
 }
@@ -140,7 +150,18 @@ nav.sticky {
 #seFag {
     background: rgba(255, 255, 255, 0);
     color: white;
-    border: none;
+    border: 2px solid white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#seFag.hover a {
+    box-shadow:
+            0 0 6px 0px #fff,  /* inner white */
+            0 0 10px 0px #f0f, /* middle magenta */
+            0 0 14px 0px #0ff; /* outer cyan */
+    border: 2px solid purple;
+
 }
 
 #fagSeksjon {
@@ -157,15 +178,71 @@ nav.sticky {
     color: #6610f2;
 }
 
-#hero {
-    position: absolute;
-    color: #fff;
-    padding: 15rem 25rem;
-    z-index: 0;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
+.forsidecontainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/*Styling av tekst på forsiden */
+.hero {
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero p {
+    font-weight: bold;
+    color: lightblue;
+    text-align: center;
+}
+
+.hero h1 {
+
+}
+
+/* pil ned på forsiden */
+/* når man holder over pilen, hopper den */
+
+/*div rundt pilen */
+.arrowdiv {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.arrowDown {
+    /*transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    */
+    display: block;
+    color: white;
+    border-width: 0 3px 3px 0;
+    align-self: center;
+    padding: 3px;
+  /*  transition: all 0.5s ease; */
+}
+
+.arrowDown:hover {
+    animation: move 3s;
+
+}
+
+.arrowDown:active {
+   background-color: purple;
+    animation: ease-out 5s;
+
+}
+
+@keyframes move{
+    0%{margin-top:0;}
+    50%{margin-top: 1rem;}
+    100%{margin-top: 0rem;}
+}
+
+@keyframes ease-out{
+    0%{margin-top:0;}
+    50%{bottom: 0;}
+    100%{bottom: 0;}
 }
 
 /* skyggestyling av knappen, mer styling under, inspirert av https://codersblock.com/blog/creating-glow-effects-with-css/*/
@@ -265,6 +342,7 @@ nav.sticky {
     border-bottom-color: #F5FEEF;
 }
 */
+
 
 /* justering av collapsable nav for små+medium skjermer */
 @media only screen and (max-width: 992px) {

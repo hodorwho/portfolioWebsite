@@ -32,9 +32,9 @@ Lise
 <body>
 
 <!-- fixed-top da sitter navbar fast i toppen, vil kanskje at den går bort med scroll? -->
-<div class="container" id="navContainer">
-    <nav class="navbar navbar-expand-lg p-0  fixed-top" id="navbar">
-        <img src="greencloudlise.png" alt="logo: grønn sky med LISE skrevet på i hvitt" width="100" height="60" class="mt-3">
+<!--<div class="container" id="navContainer">--->
+    <nav class="navbar sticky-top navbar-expand-lg p-0 " id="navbar">
+<!--        <img src="greencloudlise.png" alt="logo: grønn sky med LISE skrevet på i hvitt" width="100" height="60" class="mt-3"> -->
         <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <!-- <span class="navbar-toggler-icon bg-light"></span> -->
             <i class="fas fa-bars"></i>
@@ -46,7 +46,7 @@ Lise
                     <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#hjem"> Hjem</a>
                 </li>
                 <li class="nav-item pt-2 mx-3 mx-lg-3" id="omMegLi">
-                    <a class="nav-link py-3 px-0 px-lg-3 text-black" aria-current="page" id="active" href="#omMeg"> Om meg</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#omMeg"> Om meg</a>
                 </li>
                 <li class="nav-item pt-2 mx-3 mx-lg-3" id="ErfaringLi">
                     <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#erfaring"> erfaring</a>
@@ -57,11 +57,19 @@ Lise
             </ul>
         </div>
     </nav>
-</div>
-
+<!--</div> -->
+<wrapper data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
 <!-- bg-image  -->
 <!--- forside <div class="bg-image p-5 vh-100" style="background-image:linear-gradient(black, darkgray)"> --->
 <div class="vh-100 forsidecontainer" id="hjem">
+
+    <div class="hero">
+    <h1> Hei! Jeg heter Lise! </h1>
+        <p> scroll ned for å lære mer om meg</p>
+        <div class="arrowdiv">
+        <i class="fa-solid fa-angle-down arrowDown"></i>
+        </div>
+    </div>
  <!--   <div class="container vh-100 d-flex text-white align-items-center justify-content-evenly"> -->
  <!--       <div class="row">
             <div class="col-md-6 col-lg-6 col-sm-12"> her skal det være en gif
@@ -71,16 +79,17 @@ Lise
                 <p class="h3 display-2"> IT, webutvikling, digital markedsføring</p>
                 <p> scroll for mer content (jacascript animation!)</p>
             </div>
---->
+
+
     <div id="hero">
         <h1>Lise Mari Lorentzen</h1>
         <p class="h3 display-2"> IT, webutvikling, digital markedsføring</p>
         <p> scroll for mer content (jacascript animation!)</p>
     </div>
-
-            <video id="video" poster="space_Moment.jpg" autoplay muted loop>
-                <source src="space.mp4" type="video/mp4">
-            </video>
+--->
+    <video id="video" poster="space_Moment.jpg" autoplay muted loop>
+        <source src="space.mp4" type="video/mp4">
+    </video>
 <!--
             <div class="col-12">
                 <button class="col-12">
@@ -89,17 +98,14 @@ Lise
             </div>
 
             -->
-        </div> <!-- row -->
+       <!-- row -->
     <!--  </div> container -->
 </div>
 <!-- OM MEG -->
 
-<div class="container maincontainer sidedeler" id="omMeg">
+<div class="container maincontainer sidedeler omMeg" id="omMeg">
     <div class="row">
-        <div class="container d-flex align-items-center flex-column maincontainer">
-            <p class="h1">Om meg</p>
-        </div>
-
+        <h1>Om meg</h1>
         <div class="container maincontainer mb-4">
             <div class="row p-3 mb-4 mt-2">
                 <div class="col col-sm-10 col-md-6 col-lg-6  align-items-center container-fluid elementramme"></div>
@@ -140,7 +146,8 @@ Lise
                 <div class="col col-sm-12 col-md-6 col-lg-5 p-3 align-items-center container-fluid">
                     <img src="P1010553.JPG" class="img-fluid col-md-12 col-lg-12" alt="Bilde av meg">
                 </div>
-            </div>
+            </div> <!-- litt om meg row -->
+
             <div class="row">
                 <!-- må ha padding så bildet ikke legger seg helt nedi footeren -->
                 <div class="col col-sm-12 col-md-11 col-lg-11 align-items-center container-fluid elementramme">
@@ -163,16 +170,14 @@ Lise
                                     </div>
                 -->
             </div>
-        </div>
-    </div>
+        </div><!-- maincontainer -->
+    </div> <!-- row -->
 </div>
 
 
 <!-- erfaring -->
 <div class="container maincontainer sidedeler mb-4" id="erfaring">
-    <div class="container d-flex align-items-center flex-column maincontainer">
-        <p class="h1">Erfaring</p>
-    </div>
+    <h1>Erfaring</h1>
     <div class="animasjonsContainer">
         <!-- kode for svg, kode laget ved hjelp av Figma-->
         <svg class="cupOfCoffee align-items-center" width="182" height="178" viewBox="0 0 482 478" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -244,37 +249,50 @@ Lise
         </svg>
     </div>
     <div class="row  p-3 mb-4 mt-2">
-        <div class="col col-sm-6 col-m-6 col-lg-6 p-3 align-items-center container-fluid elementramme">
+        <div class="col col-sm-6 col-m-6 col-lg-6 p-3 align-items-center text-center container-fluid elementramme">
             <h3> Språk og programvare </h3>
+
+            <button id="button2" onclick="siFra()" enabled> <a>hello button</a></button>
+
+            <p class="pt-3"> Fra studiet</p>
+            <i class="fa-brands fa-js fa-lg fa-erf"> JavaScript/Jquery</i>
+            <i class="fa-brands fa-java fa-lg fa-erf"> Java</i>
+            <i class="fa-brands fa-bootstrap fa-lg fa-erf"> Bootstrap 5</i>
+            <i class="fa-brands fa-html5 fa-lg fa-erf"> HTML</i>
+            <i class="fa-brands fa-css3-alt fa-lg fa-erf"> CSS</i>
+            <i class="fa-brands fa-python fa-lg fa-erf"> Python</i>
+            <p class="pt-3"> Holder på å lære meg</p>
+            <i class="fa-brands fa-react fa-lg fa-erf"> React </i>
+            <i class="fa-brands fa-node-js fa-lg fa-erf"> Node.js</i>
+
+
         </div>
     </div>
 
     <div class="row  p-3 mb-4 mt-2">
         <div class="col col-sm-5 col-5 container-fluid elementramme">
             <h3> Prosjekt x </h3>
+            <p> </p>
         </div>
 
         <div class="col col-sm-5 col-5 p-3 container-fluid align-items-center elementramme">
             <h3> Prosjekt x </h3>
             <p>
-                Jeg har lyst til å flytte nærmere familie, og er derfor i utgangspunktet ute etter jobb i Stavanger-området,
-                men jeg er åpen for andre muligheter. Det viktigste for meg er et godt arbeidsmiljø der jeg føler at jeg satses på
-                og der jeg kan utvikle meg selv gjennom læring og faglig utfordring.
+
             </p>
         </div>
 
-        <div class="col col-sm-5 col-5 p-3 mt-4 container-fluid align-items-center elementramme">
-            <h3> Prosjekt x </h3>
+        <div class="col col-sm-5 col-5 p-3 mt-4 container-fluid align-items-center text-center elementramme">
+            <h3> Prosjekter </h3>
+            <p> Her kommer det prosjekter jeg vil fremheve :) </p>
         </div>
     </div>
-</div>
+</div> <!-- erfaring -->
 
 <!-- utdanning og erfaring -->
 
 <div class="container maincontainer mb-4 sidedeler" id="utdanning">
-    <div class="container d-flex align-items-center flex-column maincontainer">
-        <p class="h1">Utdanning</p>
-    </div>
+    <h1>Utdanning</h1>
     <div class="row p-3 mb-4 mt-2">
         <div class="col col-sm-6 p-3 align-items-center container-fluid elementramme">
             <h3> CV</h3>
@@ -296,19 +314,16 @@ Lise
                 og jeg holder på å lære meg node.js og React.
             </p>
         </div>
-        <div class="col-sm-6 p-3 align-items-center container-fluid bg-danger elementramme">
-            bilde her? :)
-        </div>
 
         <div class="col-12">
-            <!-- aria-expanded="false -->
             <div class="row-12 fagRow sidedeler mt-3">
-                <button id="seFag" type="button"><a> SE FAGOVERSIKT </a> </button>
-            </div>
+              <!--  <button id="seFag" type="button"><a> SE FAGOVERSIKT </a> </button>
+-->            </div>
             <div class="row-12 fagRow sidedeler">
                 <p id="pil"></p>
             </div>
         </div>
+        <button id="seFag" type="button"><a> SE FAGOVERSIKT </a> </button>
     </div>
 
     <!-- skjul denne til man trykker på knappen for å åpne  den -->
@@ -379,10 +394,9 @@ Lise
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 -->
-
+</wrapper>
 <!--- //popper and js modules --->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
 </body>
 
 <!-- til toppen- knapp -->
@@ -425,7 +439,7 @@ Lise
         </div>   <!-- row-->
     </footer>
 </div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="application/javascript" src="animations.js"> </script>
+
 </html>
