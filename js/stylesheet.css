@@ -1,11 +1,19 @@
-
+/*main/generelt */
 body {
     min-height: 100%;
     /*   background-color: #F5FEEF;
        background-color: black; */
     position: relative;
-    background-color: black;
+    background: black;
     margin: 10px;
+    background: url("space_Moment.jpg");
+    background-size: auto;
+}
+
+/*bruk bakgrunn når video skrus av*/
+body.block {
+    background: url("space_Moment.jpg");
+    background-size: cover;
 }
 
 html {
@@ -15,8 +23,7 @@ html {
 .maincontainer {
     /*background-color: black; */
     background-color: rgba(255, 255, 255, 0);
-    padding: 5px;
-    padding-top: 68px;
+    padding: 68px 5px 5px;
 }
 
 p, H2, H3 {
@@ -54,13 +61,26 @@ p {
 
 }
 
-.navbar{
-    top: 0;
-    width: 100%;
+/* neon-lilla sidedeler*/
+.sidedeler {
+    border-top: #6610f2 2px solid;
+    border-top-width: 3px;
 }
-/*innenfor body, rundt alt unntatt navbar*/
-wrapper {
 
+/* rammer inn elementer (tekst og bilder) inspirert av https://codersblock.com/blog/creating-glow-effects-with-css/*/
+.elementramme {
+    box-shadow:
+            0 0 6px 0 #fff,  /* inner white */
+            0 0 10px 0 #f0f, /* middle magenta */
+            0 0 14px 0 #0ff; /* outer cyan */
+}
+
+/*prøver å fade border inn når man scroller ned*/
+.elementramme:hover {
+    box-shadow:
+            0 0 6px 0 #fff,
+            0 0 10px 0 #f0f,
+            0 0 14px 0 #0ff;
 }
 
 /* ytterste container for feltene men også tekstfelt*/
@@ -69,10 +89,11 @@ wrapper {
     color: white;
 }
 
-/* container rundt nav */
-#navContainer {
-    /*  background-color: lightskyblue;
-      background-color: #F5FEEF; */
+/* navigasjon */
+
+.navbar{
+    top: 0;
+    width: 100%;
 }
 
 .nav-link {
@@ -85,60 +106,88 @@ nav.sticky {
     -webkit-transition:  0.2s;
     -moz-transition: 0.2s;
     -o-transition:  0.2s;
-    -ms-transition: 0.2s;
     transition: 0.2s;
 }
 
-#pilNed {
-    bottom: 0;
+/* liste-elementene i navbar */
+
+.activeli{
+    /* gjør noe kult her så man ser hvilken side man er på, active er elementet, activeli rundt/større
+    prøv å lag et bakgrunnsbilde som er farget som man legger som bakgrunn bak knappen */
+}
+
+
+#hjemLi {
+    background-image: url("bluecloud.png");
+    background-size: 100% 100%;
+}
+
+#omMegLi {
+    background-image: url("pinkcloud.png");
+    background-size: 100% 100%;
+}
+
+#utdanningLi {
+    background-image: url("orangecloud.png");
+    background-size: 100% 100%;
+}
+
+#ErfaringLi {
+    background-image: url("purplecloud.png");
+    background-size: 100% 100%;
+}
+
+/* forside */
+
+/*toggle video på/av */
+
+#toggle {
     position: absolute;
+    top: 10px;
+    left: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: green;
 }
 
-/* neon-lilla sidedeler*/
-.sidedeler {
-    border-top: #6610f2 2px solid;
-    border-top-width: 3px;
+.togglebutton {
+    position: absolute;
+    border: 3px solid white;
+    top: 70px;
+    left: 30px;
+    width:45px;
+    height: 45px;
+    background-color: black;
+    border-radius: 40px;
+    text-align: left;
+    line-height: 30px;
 }
 
-/* rammer inn elementer (tekst og bilder) inspirert av https://codersblock.com/blog/creating-glow-effects-with-css/*/
-.elementramme {
+.togglebutton:hover {
+    border: 3px solid purple;
     box-shadow:
-            0 0 6px 0px #fff,  /* inner white */
-            0 0 10px 0px #f0f, /* middle magenta */
-            0 0 14px 0px #0ff; /* outer cyan */
-}
-
-/*prøver å fade border inn når man scroller ned*/
-.elementramme:hover {
-    box-shadow:
-            0 0 6px 0px #fff,
-            0 0 10px 0px #f0f,
-            0 0 14px 0px #0ff;
-}
-
-/* fag: i utdanning, åpner et tekstfelt: */
-
-/* div rundt knappen */
-.fagRow {
-    text-align: center;
-}
-
-/*knappen som åpner feltet */
-#seFag {
-    background: rgba(255, 255, 255, 0);
+            0 0 6px 0 #fff,  /* inner white */
+            0 0 10px 0 #f0f, /* middle magenta */
+            0 0 14px 0 #0ff; /* outer cyan */
+    background-color: black;
     color: white;
-    border: 2px solid white;
-    cursor: pointer;
-    z-index: 1;
 }
 
-#seFag.hover a {
-    box-shadow:
-            0 0 6px 0px #fff,  /* inner white */
-            0 0 10px 0px #f0f, /* middle magenta */
-            0 0 14px 0px #0ff; /* outer cyan */
-    border: 2px solid purple;
+.togglebutton:focus {
+    background-color: mediumpurple;
+    color: white;
+    animation-name: spin;
+    animation-duration: 3s;
+}
 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 
 #pil {
@@ -162,6 +211,14 @@ nav.sticky {
     z-index: -1;
 }
 
+.forsidecontainer.video:active {
+    display: none;
+    background: url("space_Moment.jpg");
+    background-size: auto;
+
+}
+
+
 /*Styling av tekst på forsiden */
 .hero {
     justify-content: center;
@@ -180,8 +237,8 @@ nav.sticky {
     color: rgb(194, 226, 246);
 }
 
-/* pil ned på forsiden */
-/* når man holder over pilen, hopper den */
+/* animert pil for å scrolle ned på forsiden
+når man holder over pilen, hopper den */
 
 /*div rundt pilen */
 .arrowdiv {
@@ -204,7 +261,7 @@ nav.sticky {
 }
 
 .arrowDown:active {
-   color: purple;
+    color: purple;
     animation: ease-out 5s;
 
 }
@@ -212,7 +269,7 @@ nav.sticky {
 @keyframes move{
     0%{margin-top:0;}
     50%{margin-top: 1rem;}
-    100%{margin-top: 0rem;}
+    100%{margin-top: 0;}
 }
 
 @keyframes ease-out{
@@ -221,6 +278,56 @@ nav.sticky {
     100%{bottom: 0;}
 }
 
+/* container rundt kaffekopp-animasjonen under erfaring */
+.animasjonsContainer {
+    display: flex;
+    justify-content: center;
+
+}
+/*coffee cup animation */
+.cupOfCoffee {
+    transform: scale(0.6);
+    overflow: visible;
+}
+
+/* fag: i utdanning, åpner et tekstfelt: */
+
+/* div rundt knappen */
+.fagRow {
+    text-align: center;
+}
+
+/*knappen som åpner feltet */
+#seFag {
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* gjør ingenting */
+#seFag.hover {
+    box-shadow:
+            0 0 6px 0 #fff,  /* inner white */
+            0 0 10px 0 #f0f, /* middle magenta */
+            0 0 14px 0 #0ff; /* outer cyan */
+    border: 2px solid purple;
+
+}
+
+/* knapp nederst i fagoversikt som lukker den */
+#lukkFag {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    width: 10em;
+}
+
+/* animert knapp for å scrolle til toppen
+*/
 /* skyggestyling av knappen, mer styling under, inspirert av https://codersblock.com/blog/creating-glow-effects-with-css/*/
 #tilToppen {
     width: 300px;
@@ -263,7 +370,6 @@ nav.sticky {
     -webkit-transition:  opacity 0.5s, transform 0.5s;
     -moz-transition:  opacity 0.5s, transform 0.5s;
     -o-transition:  opacity 0.5s, transform 0.5s;
-    -ms-transition: opacity 0.5s, transform 0.5s;
 }
 
 #tilToppen.active {
@@ -276,53 +382,6 @@ nav.sticky {
     background-color: rgba(255, 255, 255, 0);
     border: none;
 }
-
-.activeli{
-    /* gjør noe kult her så man ser hvilken side man er på, active er elementet, activeli rundt/større
-    prøv å lag et bakgrunnsbilde som er farget som man legger som bakgrunn bak knappen */
-}
-
-
-#hjemLi {
-    background-image: url("bluecloud.png");
-    background-size: 100% 100%;
-}
-
-#omMegLi {
-    background-image: url("pinkcloud.png");
-    background-size: 100% 100%;
-}
-
-#utdanningLi {
-    background-image: url("orangecloud.png");
-    background-size: 100% 100%;
-}
-
-#ErfaringLi {
-    background-image: url("purplecloud.png");
-    background-size: 100% 100%;
-}
-/* container rundt kaffekopp-animasjonen*/
-.animasjonsContainer {
-    display: flex;
-    justify-content: center;
-
-}
-/*coffee cup animation */
-.cupOfCoffee {
-    transform: scale(0.6);
-    overflow: visible;
-}
-
-/*row rundt første+andre studieår*/
-#studieRow {
-
-}
-
-.studieCol {
-
-}
-
 
 /*footeren */
 #footerContainer {
@@ -337,7 +396,8 @@ nav.sticky {
     text-align: left;
 }
 
-/* justering av collapsable nav for små+medium skjermer */
+/* justeringer for små+medium skjermer */
+
 @media only screen and (max-width: 992px) {
     /* det aktive elementet i collapsed navbar*/
     #omMegLi #active {
@@ -360,9 +420,13 @@ nav.sticky {
     .navbar-toggler {
 
     }
-
+/* toggle for mellomstore skjermer
     .togglebutton {
-        font-size: 6vh;
+        display: none;
+    }
+*/
+    .navbutton {
+        font-size: 40px;
     }
 
     /*er i veien på smale skjermer så jeg vil at den skal sitte over footeren da*/
@@ -397,5 +461,9 @@ nav.sticky {
     body {
         background: url("space_Moment.jpg");
         background-size: auto;
+    }
+
+    .togglebutton {
+        display: none;
     }
 }
