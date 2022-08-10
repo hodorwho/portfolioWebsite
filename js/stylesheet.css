@@ -5,20 +5,12 @@ body {
        background-color: black; */
     position: relative;
     background-color: black;
+    margin: 10px;
 }
 
-/*
-.row {
-    background-color: #F5FEEF;
-    border: 5px solid green;
-    border-style: inset;
-    padding: 5px;
+html {
+    box-sizing: border-box;
 }
-
-
-.mainrow {
-    padding: 5px;
-} */
 
 .maincontainer {
     /*background-color: black; */
@@ -64,10 +56,11 @@ p {
 
 .navbar{
     top: 0;
+    width: 100%;
 }
 /*innenfor body, rundt alt unntatt navbar*/
 wrapper {
-    border: 2px solid purple;
+
 }
 
 /* ytterste container for feltene men også tekstfelt*/
@@ -319,6 +312,15 @@ nav.sticky {
 .cupOfCoffee {
     transform: scale(0.6);
     overflow: visible;
+}
+
+/*row rundt første+andre studieår*/
+#studieRow {
+
+}
+
+.studieCol {
+
 }
 
 
