@@ -35,11 +35,13 @@ h3 {
     font-weight: bold;
     padding-top: 8px;
 }
+
 /*seksjonsoverskrifter*/
-h1 {
+h2 {
     color: #F5FEEF;
     text-align: center;
     padding: 1rem;
+    font-size: 2.6rem;
 }
 
 p {
@@ -233,8 +235,9 @@ nav.sticky {
 }
 
 .hero h1 {
-    font-size: 20vw;
+    font-size: 22vw;
     color: rgb(194, 226, 246);
+    text-align: center;
 }
 
 /* animert pil for å scrolle ned på forsiden
