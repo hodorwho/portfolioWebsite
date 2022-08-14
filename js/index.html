@@ -30,7 +30,7 @@ Lise
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <!--   <link rel="manifest" href="/site.webmanifest">  -->
 </head>
 
 <body>
@@ -259,6 +259,7 @@ Lise
         <div class="col col-sm-10 col-10 p-3 mt-4 container-fluid align-items-center text-center elementramme">
             <h3> Nettsiden </h3>
             <p class="m-3"> Denne nettsiden er kodet i HTML, CSS, Bootstrap 5 og Javascript
+            <br> Flere prosjekter kommer etter hvert!
             <br><br>Se koden på min GitHub:
             </p>
             <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/hodorwho" tabindex="0" aria-label="link til min GitHub">
@@ -273,35 +274,26 @@ Lise
 <div class="maincontainer mb-4 sidedeler" id="utdanning">
     <div class="row p-3 mb-4 mt-2">
         <h1>Utdanning</h1>
-        <div class="col col-sm-6 p-3 align-items-center container-fluid elementramme">
+        <div class="col col-sm-6 p-3 align-items-center text-center container-fluid elementramme">
             <h3> CV</h3>
             <p>
-                Min CV kan lastes ned som PDF fra linken under. I tillegg til min pågående bachelor har jeg et årsstudium i Digital Markedsføring samt noen enkeltfag.
-                / PDF-link
+                I tillegg til min pågående bachelor har jeg et årsstudium i Digital Markedsføring samt noen enkeltfag.
+                <br>
+                <a aria-label="min CV - åpnes som PDF i Google Drive i nytt vindu" role="button" target="_blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/18QY5EGlhXNHfimaDRK_RQNAPSireKz9N/view?usp=sharing"> Se min CV her </a>
             </p>
-            <!-- ha en "les mer" her så den ikke tar så mye plass-->
             <h3> Mer i dybden om min bachelor i IT </h3>
 
             <p>
                 I dette studiet lærer vi et godt grunnlag for en karriere i IT-bransjen, og jeg føler jeg kan gå i mange retninger når jeg er ferdig med denne graden.
                 Under er det en mer detaljert oversikt over mine fag og innholdet i de.
-                Prosjekt-siden fremhever noen prosjekter som viser kunnskapen jeg har lært gjennom disse fagene.
             </p>
-
-            <p>
-                I løpet av studiet har vi kodet i Java, JavaScript/JQuery og litt Python. Jeg har bygd nettsider med HTML, CSS og Bootstrap (som denne nettsiden er bygd med),
-                og jeg holder på å lære meg node.js og React.
-            </p>
+            <button id="seFag" class=" fagBtn btn btn-outline-light btn-floating m-1" aria-label="åpne fagoversikt i felt under"><a> SE FAGOVERSIKT </a> </button>
         </div>
 
-        <div class="col-12">
-            <div class="col-12 fagRow sidedeler mt-3">
-            </div>
-            <div class="col-12 fagRow sidedeler">
+  <!--      <div class="col-12">
+            <div class="col-12 fagBtn sidedeler mt-3">
                 <p id="pil"></p>
-            </div>
-        </div>
-        <button id="seFag" aria-label="åpne fagoversikt i felt under"><a> SE FAGOVERSIKT </a> </button>
+            </div> -->
     </div>
 </div> <!-- utdanning-container -->
 
@@ -364,7 +356,7 @@ Lise
 
     <!-- ekstra fagoversikt-knapp som er synlig når fagoversikten er åpen-->
     <div class="d-flex justify-content-center mb-3">
-    <button id="lukkFag" aria-label="lukk fagoversikt"><a> LUKK FAGOVERSIKT </a> </button>
+    <button id="lukkFag" class="fagBtn btn btn-outline-light btn-floating m-1" aria-label="lukk fagoversikt"><a> LUKK FAGOVERSIKT </a> </button>
     </div>
 </div> <!-- fagseksjon-container -->
 
@@ -392,7 +384,7 @@ Lise
 </body>
 
 <!-- til toppen- knapp -->
-<button id="tilToppen"><span> <i class="fa-solid fa-arrow-up"></i> </span></button>
+<button id="tilToppen"><span> <i class="fa-solid fa-arrow-up" aria-label="til toppen av siden"></i> </span></button>
 
 <!-- fixed-bottom  position-fixed (footer følger med når man scroller,nå ligger den fast nederst)-->
 <div class="container-fluid" id="footerContainer">
@@ -418,10 +410,10 @@ Lise
                         <i class="fa-brands fa-github"></i>
                     </a>
 
-                    <!-- Mail -->
+                    <!-- Mail
                     <a class="btn btn-outline-light btn-floating m-1" tabindex="0" aria-label="link til min E-post" href="mailto:lisemarilorentzen@gmail.com" role="button">
                         <i class="fa-solid fa-envelope"></i>
-                    </a>
+                    </a> -->
                 </div>
             </div>   <!--column 2-->
         </div>   <!-- row-->

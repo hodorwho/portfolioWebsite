@@ -292,39 +292,35 @@ når man holder over pilen, hopper den */
 
 /* fag: i utdanning, åpner et tekstfelt: */
 
-/* div rundt knappen */
-.fagRow {
+/*knappene som åpner/lukker feltet */
+.fagBtn {
     text-align: center;
-}
-
-/*knappen som åpner feltet */
-#seFag {
     background: rgba(255, 255, 255, 0);
+    background: black;
     color: white;
-    border: 2px solid white;
+    border: 2px solid #6610f2;
     cursor: pointer;
     z-index: 1;
+    width: 10em;
+}
+
+/* knapp nederst i fagoversikt som lukker den */
+#lukkFag {
+    width: 10em;
 }
 
 /* gjør ingenting */
-#seFag.hover {
+.fagBtn:hover {
     box-shadow:
             0 0 6px 0 #fff,  /* inner white */
             0 0 10px 0 #f0f, /* middle magenta */
             0 0 14px 0 #0ff; /* outer cyan */
     border: 2px solid purple;
-
-}
-
-/* knapp nederst i fagoversikt som lukker den */
-#lukkFag {
-    border: 2px solid white;
-    background-color: black;
+    background: black;
     color: white;
-    cursor: pointer;
-    z-index: 1;
-    width: 10em;
+
 }
+
 
 /* animert knapp for å scrolle til toppen
 */
@@ -417,9 +413,6 @@ når man holder over pilen, hopper den */
         background-color: black;
     }
 
-    .navbar-toggler {
-
-    }
 /* toggle for mellomstore skjermer
     .togglebutton {
         display: none;

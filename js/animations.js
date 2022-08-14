@@ -1,8 +1,8 @@
 // Scrollspy fra Bootstrap for sømløs scrolling/navigering fra navbar
-//$("body").scrollspy({target: "navbar"});
-var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+//$("body").scrollspy({target: "navbar"}); tror ikke den gjør noe lol
+/*var scrollSpy = new bootstrap.ScrollSpy(document.body, {
     target: '.navbar'
-})
+});*/
 
 /* scroll ned fra forsiden*/
 $(".arrowdiv").on('click', function () {
