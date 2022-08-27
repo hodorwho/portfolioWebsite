@@ -35,23 +35,23 @@ Lise
 
 <body>
 
-    <nav class="navbar sticky-top navbar-expand-lg p-0 justify-content-end" id="navbar">
+    <nav class="navbar sticky-top navbar-expand-lg p-0 justify-content-end" id="navbar" role="navigation">
         <button class="navbar-toggler me-2 ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars navbutton"></i>
         </button>
         <div class="collapse navbar-collapse justify-content-end pt-1 pe-3" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item pt-2 mx-3 mx-lg-3" id="hjemLi">
-                    <a class="nav-link py-3 px-0 px-lg-3 text-black" tabindex="1" href="#hjem"> Hjem</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#hjem"> Hjem</a>
                 </li>
                 <li class="nav-item pt-2 mx-3 mx-lg-3" id="omMegLi">
-                    <a class="nav-link py-3 px-0 px-lg-3 text-black" tabindex="1" href="#omMeg"> Om meg</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#omMeg"> Om meg</a>
                 </li>
                 <li class="nav-item pt-2 mx-3 mx-lg-3" id="ErfaringLi">
-                    <a class="nav-link py-3 px-0 px-lg-3 text-black" tabindex="1" href="#erfaring"> Erfaring</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#erfaring"> Erfaring</a>
                 </li>
                 <li class="nav-item pt-2 mx-3 mx-lg-3" id="utdanningLi">
-                    <a class="nav-link py-3 px-0 px-lg-3 text-black" tabindex="1" href="#utdanning"> Utdanning</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#utdanning"> Utdanning</a>
                 </li>
             </ul>
         </div>
@@ -131,9 +131,12 @@ Lise
            </div>
        </div> litt om meg row -->
 
+    <!-- bilde av meg, når jeg finner et fint bilde
+
     <div class="col col-sm-12 col-md-6 col-lg-5 p-3 align-items-center container-fluid">
         <img src="P1010553.JPG" class="img-fluid col-md-12 col-lg-12" alt="Bilde av meg">
     </div>
+     -->
 
     <div class="row p-3 mb-4 mt-2">
         <!-- må ha padding så bildet ikke legger seg helt nedi footeren -->
@@ -243,12 +246,12 @@ Lise
     </div>
 
     <div class="row p-3 mb-4 mt-2">
-        <div class="col col-sm-5 col-5 mt-4 container-fluid align-items-center elementramme">
+        <div class="col col-sm-5 col-5 mt-4 container-fluid align-items-center text-center elementramme">
             <h3> Animasjon</h3>
             <p class="mt-3"> Bakgrunnsbildet (animasjonen) er kodet i HTML5 canvas og JavaScript</p>
         </div>
 
-        <div class="col col-sm-5 col-5 mt-4 container-fluid align-items-center elementramme">
+        <div class="col col-sm-5 col-5 mt-4 container-fluid align-items-center text-center elementramme">
             <h3> Koppen </h3>
             <p class="mt-3">
                 Koppen er tegnet i Krita (tegneprogram) og animert ved hjelp av CSS animations og GSAP timeline
@@ -259,7 +262,7 @@ Lise
         <div class="col col-sm-10 col-10 p-3 mt-4 container-fluid align-items-center text-center elementramme">
             <h3> Nettsiden </h3>
             <p class="m-3"> Denne nettsiden er kodet i HTML, CSS, Bootstrap 5 og Javascript
-            <br> Flere prosjekter kommer etter hvert!
+            <br> (Flere prosjekter kommer etter hvert!)
             <br><br>Se koden på min GitHub:
             </p>
             <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/hodorwho" tabindex="0" aria-label="link til min GitHub">
@@ -279,7 +282,7 @@ Lise
             <p>
                 I tillegg til min pågående bachelor har jeg et årsstudium i Digital Markedsføring samt noen enkeltfag.
                 <br>
-                <a aria-label="min CV - åpnes som PDF i Google Drive i nytt vindu" role="button" target="_blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/18QY5EGlhXNHfimaDRK_RQNAPSireKz9N/view?usp=sharing"> Se min CV her </a>
+                <a aria-label="min CV - åpnes som PDF i Google Drive i nytt vindu" role="button" target="_blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/1izemHXjskbb_C0EzFU2RumfxAxhcYR9S/view?usp=sharing"> Se min CV her </a>
             </p>
             <h3> Mer i dybden om min bachelor i IT </h3>
 
@@ -346,9 +349,9 @@ Lise
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-5 p-3 align-items-center container-fluid elementramme">
             <h3> Planlagte fag tredje studieår</h3>
             <p> <strong>
-                Datasikkerhet <br> Webapplikasjoner <br> Universell utforming av IKT
+                Datasikkerhet <br> Webapplikasjoner <br> Universell utforming av IKT <br> Apputvikling </br>
                 <br><br>
-                Bacheloroppgave <br> Nettverks- og systemadministrasjon
+                Bacheloroppgave
             </strong>
             </p>
         </div>
@@ -391,12 +394,12 @@ Lise
     <footer class="footer">
         <div class="row p-4">
             <div class="col-lg-9 col-md-12 mb-4 mb-md-0 pt-2 footercol">
-                <h5> Om nettsiden</h5>
+                <h4> Om nettsiden</h4>
                 <p> Denne nettsiden er bygd av meg i bootstrap 5, HTML, CSS og JavaScript/JQuery</p>
                 <p> Nettsiden er en del av min portefølje </p>
             </div> <!--column 1-->
             <div class="col-lg-3 col-md-12 mb-4 mb-md-2 pt-2 text-center">
-                <h5> Kontakt meg </h5>
+                <h4> Kontakt meg </h4>
 
                 <div class="mt-4">
 
