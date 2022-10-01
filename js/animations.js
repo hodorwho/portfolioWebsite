@@ -54,3 +54,14 @@ const tl = gsap.timeline({defaults: {duration: 0.5, ease: "power1.in"}})
 //movement
 tl.fromTo('.cupOfCoffee', {y:1, rotation: '0deg'}, {y: -30, rotation:'20deg', yoyo: true, repeat: -1})
 tl.fromTo('#drops', {y:0, rotation: '0deg'}, {y: 30, rotation:'10deg', yoyo: true,  repeat: -1})
+
+
+/* toggle switch: norsk og engelsk språk */
+$("#lang").click(function(){
+   if (document.documentURI.includes("index.html")){
+       window.location.href = "indexEn.html"
+   }
+   else {
+       window.location.href = "index.html"
+   }
+});

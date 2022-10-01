@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 
 <!--
-Hei!
-Denne nettsiden har jeg bygget selv som en del av og for å vise frem min portefølje til jeg skal ut i arbeidslivet høsten 2023.
-Nettsiden er bygget i HTML, CSS, Bootstrap 5 og JavaScript/JQuery.
-Kode hentet fra eller inspirert av guider eller andre utviklere er også akkreditert.
+Hello!
+This website is built from scratch by me as part of my portfolio, as I'm looking for a graduate position next fall, after finishing my
+bachelor's in IT next spring.
+The code not written by me, or code my solutions is inspired by is referenced as comments in the project. On my projects page in GitHub,
+you can see my process and the iterations I went through building the website.
 
-Koden til nettsiden er skrevet i intellij og er lastet opp til GitHub. På prosjektets side i Github kan man se prosessen min og iterasjonene av nettsiden.
-Selv om nettsidebygging er en liten del av det jeg har lært i graden min, er det noe jeg synes er veldig gøy,
-og det er derfor jeg har tatt meg tid til å bygge opp denne siden og implementere designelementer, istedenfor å bruke en plattform.
-Siden er for tiden fortsatt under utvikling (høsten 2022).
-
+Even though website development is a small part of what I've learned in my degree, it's something I think is quite fun.
+That's why I took the time to build this page and implement various design elements instead of using a platform or framework.
+The page is under development (fall 2022).
 Lise
 
 -->
@@ -29,73 +28,78 @@ Lise
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!--   <link rel="manifest" href="/site.webmanifest">  -->
 </head>
 
 <body>
 
     <nav class="navbar sticky-top navbar-expand-lg p-0 justify-content-end" id="navbar" role="navigation">
-        <!-- språkbytte-->
-        <button id="lang" class="btn pt-3 pb-3 mx-3 mx-lg-3 text-black m-1">English</button>
-        <!-- hamburgerknapp for små skjermer-->
-        <button class="navbar-toggler me-2 ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- language switch-->
+        <button id="lang" class="btn pt-3 pb-3 mx-3 mx-lg-3 text-black m-1">Norsk</button>
+
+        <button class="navbar-toggler me-2 ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
             <i class="fas fa-bars navbutton"></i>
         </button>
         <div class="collapse navbar-collapse justify-content-end pt-1 pe-3" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item pt-2 mx-3 mx-lg-3" id="hjemLi">
-                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#hjem"> Hjem</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#hjem"> Home</a>
                 </li>
                 <li class="nav-item pt-2 mx-3 mx-lg-3" id="omMegLi">
-                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#omMeg"> Om meg</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#omMeg"> About me</a>
                 </li>
                 <li class="nav-item pt-2 mx-3 mx-lg-3" id="ErfaringLi">
-                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#erfaring"> Erfaring</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#erfaring"> Experience</a>
                 </li>
                 <li class="nav-item pt-2 mx-3 mx-lg-3" id="utdanningLi">
-                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#utdanning"> Utdanning</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 text-black" href="#utdanning"> Education</a>
                 </li>
             </ul>
         </div>
     </nav>
-
-    <div class="vh-100 scrollspy forsidecontainer" id="hjem" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0" tabindex="0">
-   <button class="btn btn-outline-light btn-floating m-1 togglebutton" role="switch" aria-checked="true" tabindex="0" aria-label="pause/avpause videobakgrunn">
+<!--</div>
+<wrapper data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0"> -->
+<!-- bg-image  -->
+<!--- forside <div class="bg-image p-5 vh-100" style="background-image:linear-gradient(black, darkgray)"> --->
+<div class="vh-100 scrollspy forsidecontainer" id="hjem" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0" tabindex="0">
+   <button class="btn btn-outline-light btn-floating m-1 togglebutton" role="switch" aria-checked="true" tabindex="0" aria-label="pause/unpause video background">
         <i class="fa-solid fa-moon toggle"></i> Pause
     </button>
 
     <div class="hero">
-    <h1> Hei! </h1>
-        <p class="display-5"> Dette er min portefølje</p>
-        <p> scroll ned for å lære mer om meg</p>
+    <h1> Hello! </h1>
+        <p class="display-5"> This is my portfolio</p>
+        <p> scroll down to learn more about me</p>
         <div class="arrowdiv">
         <i class="fa-solid fa-angle-down arrowDown"></i>
         </div>
     </div>
 
-    <!-- Bakgrunnen er en animasjon laget i HTML5 canvas og JS, ved hjelp av https://github.com/mattdesl/canvas-sketch + node.js -->
+    <!-- The background is an animation made in HTML5 canvas and JS, using https://github.com/mattdesl/canvas-sketch + node.js -->
     <video id="video" poster="space_Moment.jpg" autoplay muted loop>
         <source src="space.mp4" type="video/mp4">
     </video>
 </div>
 
-<!-- OM MEG -->
+<!-- ABOUT ME -->
 
 <div class="maincontainer sidedeler omMeg" id="omMeg">
     <div class="row p-3 mb-4 mt-2">
-        <h2>Om meg</h2>
+        <h2>About me</h2>
                     <div class="col col-xs-7 col-sm-10 col-md-10 col-lg-6 pt-2 align-items-center container-fluid elementramme">
-                        <h3> Hvorfor ansette meg </h3>
+                        <h3> Why hire me </h3>
                         <p>
-                            (det er her jeg selger meg selv inn til deg!)
+                            I've worked in the service business since I was 16.
+                            During this time, I've developed a lot of soft skills like planning, prioritising tasks
+                            (juggling lots of customers, orders and other tasks at the same time) problem solving, time management
+                            and communication through teamwork and customer relations.
                             <br><br>
-                            Jeg har jobbet i servicebransjen siden jeg kunne få jobb som 16åring.
-                            Egenskapene ("soft skills") jeg har tilegnet meg fra denne bransjen ser jeg på som veldig nyttig i arbeidslivet.
-                            Planlegging og prioritering gjennom å ha mange baller i lufta (mange kaffebestillinger), problemløsing, jobbe under tidspress
-                            og kommunikasjon både ved å samarbeide i team og håndtering av kunder.
-                            <br><br>
-                            I tillegg har jeg gjennom studiet i Digital Markedsføring samt flere fag i mitt nåværende studie
-                            fått innsikt i og interesse for hvordan kode lages for å dekke brukernes behov.
-                            I kombinasjon med kompetansen jeg tilegner meg gjennom IT-studiet føler jeg at jeg lett kan ta plass i et tverrfaglig team og også jobbe direkte med kunder.
+                            In addition, through my 1-year course in Digital Marketing as well as several courses in my bachelor in IT,
+                            I've developed an interest in how to code with the end user or customer in mind.
+                            In combination with the skills and theory I learn through my bachelor, I feel like I have the skills
+                            to easily take my place in a interdisciplinary team as well as working with customers and clients.
                             <br><br>
                         </p>
                     </div>
@@ -103,11 +107,11 @@ Lise
 
     <div class="row p-3 mb-4 mt-2">
         <div class="col col-xs-7 col-sm-10 col-md-10 col-lg-6 pt-2 align-items-center container-fluid elementramme">
-            <h3> Hva jeg leter etter </h3>
+            <h3> What I'm looking for </h3>
             <p>
-                Jeg har lyst til å flytte nærmere familie, og er derfor i utgangspunktet ute etter jobb i Stavanger-området.
-                Det viktigste for meg er et godt arbeidsmiljø der jeg føler at
-                jeg kan utvikle meg selv gjennom læring og faglig utfordring, og finne ut hvilket fagområde jeg vil fordype meg i.
+                I'm primarily looking for a job in the Stavanger-area as I want to move closer to my family.
+                A good work environment where I feel like I can develop through learning and challenging tasks is important to me,
+                especially since I'm doing a pretty broad bachelor and doesn't quite know what I want to focus on yet.
             </p>
         </div>
     </div>
@@ -116,7 +120,7 @@ Lise
 
 <!-- erfaring -->
 <div class="maincontainer sidedeler mb-4" id="erfaring">
-    <h2>Erfaring</h2>
+    <h2>Experience</h2>
     <div class="animasjonsContainer">
         <!-- kode for svg, kode laget ved hjelp av Figma-->
         <svg class="cupOfCoffee align-items-center" width="182" height="178" viewBox="0 0 482 478" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,16 +193,16 @@ Lise
     </div>
     <div class="row p-3 mb-4 mt-2">
         <div class="col col-sm-11 col-m-11 col-lg-11 p-3 align-items-center text-center container-fluid elementramme">
-            <h3> Språk og programvare </h3>
+            <h3> Languages</h3>
 
-            <p class="pt-3"> Jeg har (hittil) kodet i</p>
+            <p class="pt-3"> So far, I've coded in</p>
             <i class="fa-brands fa-js fa-lg fa-erf"> JavaScript/Jquery</i>
             <i class="fa-brands fa-java fa-lg fa-erf"> Java</i>
             <i class="fa-brands fa-bootstrap fa-lg fa-erf"> Bootstrap 5</i>
             <i class="fa-brands fa-html5 fa-lg fa-erf"> HTML</i>
             <i class="fa-brands fa-css3-alt fa-lg fa-erf"> CSS</i>
             <i class="fa-brands fa-python fa-lg fa-erf"> Python</i>
-            <p class="pt-3"> Holder på å lære meg:</p>
+            <p class="pt-3"> Starting to learn:</p>
             <i class="fa-brands fa-react fa-lg fa-erf"> React </i>
             <i class="fa-brands fa-node-js fa-lg fa-erf"> Node.js</i>
             <i class="fa-brands fa-android"> Kotlin </i>
@@ -209,50 +213,51 @@ Lise
 
     <div class="row p-3 mb-4 mt-2">
         <div class="col col-sm-5 col-5 mt-4 container-fluid align-items-center text-center elementramme">
-            <h3> Animasjon</h3>
-            <p class="mt-3"> Bakgrunnsbildet (animasjonen) er kodet i HTML5 canvas og JavaScript</p>
+            <h3> Animation</h3>
+            <p class="mt-3"> The background image (animation) is coded in HTML5 and JavaScript</p>
         </div>
 
         <div class="col col-sm-5 col-5 mt-4 container-fluid align-items-center text-center elementramme">
-            <h3> Koppen </h3>
+            <h3> the mug </h3>
             <p class="mt-3">
-                Koppen er tegnet i Krita (tegneprogram) og animert ved hjelp av CSS animations og GSAP timeline
+                The coffee cup is drawed in Krita (drawing software) and animated with CSS animations and GSAP timeline
             </p>
         </div>
     </div> <!-- erfaring-row -->
     <div class="row p-3 mb-4 mt-2">
         <div class="col col-sm-10 col-10 p-3 mt-4 container-fluid align-items-center text-center elementramme">
-            <h3> Nettsiden </h3>
-            <p class="m-3"> Denne nettsiden blir kodet i HTML, CSS, Bootstrap 5 og Javascript
-            <br> (Flere prosjekter kommer etter hvert!)
-            <br><br>Se koden på min GitHub:
+            <h3> This website </h3>
+            <p class="m-3"> This website is coded in HTML, CSS, Bootstrap 5 and Javascript
+            <br> (More projects to come!)
+            <br><br>Check out my code on github:
             </p>
-            <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/hodorwho" tabindex="0" aria-label="link til min GitHub">
+            <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/hodorwho" tabindex="0" aria-label="external link to my GitHub page">
                 <i class="fa-brands fa-github"></i>
             </a>
         </div>
-    </div> <!-- erfaring-row -->
-</div> <!-- erfaring -->
+    </div> <!-- experience-row -->
+</div> <!-- experience -->
 
-<!-- utdanning -->
+<!-- education -->
 
 <div class="maincontainer mb-4 sidedeler" id="utdanning">
     <div class="row p-3 mb-4 mt-2">
-        <h2>Utdanning</h2>
+        <h2>Education</h2>
         <div class="col col-sm-6 p-3 align-items-center text-center container-fluid elementramme">
             <h3> CV</h3>
             <p>
-                I tillegg til min pågående bachelor har jeg et årsstudium i Digital Markedsføring samt noen enkeltfag.
+                In addition to my current bachelor in information technology, I also have a 1-year course in Digital Marketing
+                as well as some individual courses.
                 <br>
-                <a aria-label="min CV - åpnes som PDF i Google Drive i nytt vindu" role="button" target="_blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/117lt22-BRwePWRP0vr_wTh5aiOqJF3To/view?usp=sharing"> Se min CV her </a>
+                <a aria-label="my CV - opens as a PDF in Google Drive in a new window" role="button" target="_blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/117lt22-BRwePWRP0vr_wTh5aiOqJF3To/view?usp=sharing"> Se min CV her </a>
             </p>
-            <h3> Mer i dybden om min bachelor i IT </h3>
+            <h3> In depth about my bachelor </h3>
 
             <p>
-                I dette studiet lærer vi et godt grunnlag for en karriere i IT-bransjen, og jeg føler jeg kan gå i mange retninger når jeg er ferdig med denne graden.
-                Under er det en mer detaljert oversikt over mine fag og innholdet i de.
+                The focus of this degree is to give us a good foundation for a career in a lot of different directions within IT.
+                You'll find a detailed overview of my courses and their contents (like programming language) below.
             </p>
-            <button id="seFag" class=" fagBtn btn btn-outline-light btn-floating m-1" aria-label="åpne fagoversikt i felt under"><a> SE FAGOVERSIKT </a> </button>
+            <button id="seFag" class=" fagBtn btn btn-outline-light btn-floating m-1" aria-label="open course overview below"><a> SEE COURSES </a> </button>
         </div>
 
     </div>
@@ -260,42 +265,42 @@ Lise
 
 <div class="maincontainer mb-2 align-content-center align-items-center" style="display: none" id="fagSeksjon">
     <div class="row m-2 mb-4 mt-2">
-     <div class="col-sm-11 mt-4 col-md-11 col-lg-5 text-start container-fluid elementramme">
-            <h3> Første studieår</h3>
+        <div class="col-sm-11 mt-4 col-md-11 col-lg-5 text-start container-fluid elementramme">
+            <h3> First year</h3>
             <p>
-                <strong> Diskret matematikk </strong> <br> datamatte, algoritmer
+                <strong> Discrete mathematics </strong> <br> computer mathematics, algorithms
                 <br><br>
-                <strong> Programmering </strong> <br>  Java-programmering
+                <strong> Programming </strong> <br>  Intro to Java programming
                 <br><br>
-                <strong> Webutvikling og inkluderende design </strong> <br>  innovasjon og nettsidebygging i HTML, CSS
+                <strong> Inclusive web design </strong> <br>  Innovation and building accessible websites in HTML and CSS
                 <br><br>
-                <strong> Internet of Things </strong> <br>  teori om enheter, tilkoblinger og kommunikasjon i IoT
+                <strong> Internet of Things </strong> <br>  theory course, focusing on IoT devices and computer networks
                 <br><br>
-                <strong> Databaser </strong> <br>  databasesystem, databasebygging, SQL og modellering
+                <strong> Databases </strong> <br>  database systems, building and design, SQL
                 <br><br>
-                <strong> Webprogrammering </strong> <br>  fullstack-programmering. JavaScript, JQuery, Spring Boot, Maven var brukt for bygging av API-prosjekter
+                <strong> Web programming </strong> <br>  fullstack-programming. JavaScript, JQuery, Spring Boot, Maven for building API-projects
             </p>
         </div>
 
 
     <!--    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-5 p-3 mt-4 align-items-center container-fluid elementramme">
     -->    <div class="col-sm-11 mt-4 col-md-11 col-lg-5 text-start container-fluid elementramme">
-            <h3> Andre studieår</h3>
+            <h3> Second year</h3>
             <p>
-                <strong> Menneske Maskin Interaksjon </strong> <br> prototypebygging, brukertesting og evaluering av brukervennlighet av nettsider.
-                Hvordan man bygger et produkt med brukerens behov i fokus.
+                <strong> Human Computer Interaction </strong> <br> prototype building, user testing, evaluation of usability in websites
                 <br><br>
-                <strong> Systemutvikling </strong> <br> utviklingsprosessen, prosessmodeller. Teoretisk fag for å gi mer innsikt i prosessen.
+                <strong> Software engineering </strong> <br> Focusing on the development process, framework
+                and interactions between systems and user/stakeholder groups
                 <br><br>
-                <strong> Algoritmer og datastrukturer </strong> <br> java, algoritmer, lister, stacks, hash, trær ++
+                <strong> Algorithms and data structures </strong> <br> Java, algorithms, big O notaton, lists, stacks, hash, trees ++
                 <br><br>
-                <strong> Datanettverk og skytjenester </strong> <br> cloud computing, her bygde jeg en chatbot med sockets i Python.
+                <strong> Networking and cloud computing </strong> <br> TCP/IP connections and network protocols, building a socket chatbot in Python, cisco packet tracker
                 <br><br>
-                <strong> Operativsystemer </strong> <br> Todelt fag. En kombinasjon av teori og praksis om bl.a. threads, pipes, Docker, scripts i Linux og PowerShell,
-                datamaskinarkitektur.
+                <strong> Operating systems </strong> <br> A combination of theory and practice on the topic of thread,
+                pipes, Docker, scripting in Linux and Powershell, computer architecture ++
                 <br><br>
-                <strong> Testing av programvare (valgfag) </strong> <br> Prosjektoppgave der vi gjennomførte
-                tre nivåer av testing av en applikasjon (enhet, integrasjon og system) og skrev en rapport om prosessen.
+                <strong> Software testing (elective) </strong> <br> Theory and project assignment, where we tested an application
+                in three levels (unit, integration and system) and wrote a test report.
             </p>
             </div>
 
@@ -303,9 +308,9 @@ Lise
 
     <div class="row p-3 mb-4 mt-2">
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-5 p-3 align-items-center container-fluid elementramme">
-            <h3> Planlagte fag tredje studieår</h3>
+            <h3> Planned courses for my final year</h3>
             <p> <strong>
-                Datasikkerhet <br> Webapplikasjoner <br> Universell utforming av IKT <br> Apputvikling <br>
+                Computer security <br> Web application <br> Universal Design (elective) <br> Appdevelopment (elective) <br>
                 <br><br>
                 Bacheloroppgave
             </strong>
@@ -315,53 +320,51 @@ Lise
 
     <!-- ekstra fagoversikt-knapp som er synlig når fagoversikten er åpen-->
     <div class="d-flex justify-content-center mb-3">
-    <button id="lukkFag" class="fagBtn btn btn-outline-light btn-floating m-1" aria-label="lukk fagoversikt"><a> LUKK FAGOVERSIKT </a> </button>
+    <button id="lukkFag" class="fagBtn btn btn-outline-light btn-floating m-1" aria-label="close course overview"><a> CLOSE COURSE OVERVIEW </a> </button>
     </div>
 </div> <!-- fagseksjon-container -->
 
+
+
 <!-- til toppen- knapp -->
-<button id="tilToppen"><span> <i class="fa-solid fa-arrow-up" aria-label="til toppen av siden"></i> </span></button>
+<button id="tilToppen"><span> <i class="fa-solid fa-arrow-up" aria-label="back to the top"></i> </span></button>
 
 <!-- fixed-bottom  position-fixed (footer følger med når man scroller,nå ligger den fast nederst)-->
 <div class="container-fluid" id="footerContainer">
     <footer class="footer">
         <div class="row p-4">
             <div class="col-lg-9 col-md-12 mb-4 mb-md-0 pt-2 footercol">
-                <h4> Om nettsiden</h4>
-                <p> Denne nettsiden er bygd av meg i bootstrap 5, HTML, CSS og JavaScript/JQuery</p>
-                <p> Nettsiden er en del av min portefølje </p>
+                <h4> About the website</h4>
+                <p> This website is built by me from scratch, using Bootstrap 5, HTML, CSS and Javascript/JQuery</p>
+                <p> The website is part of my portfolio </p>
             </div> <!--column 1-->
             <div class="col-lg-3 col-md-12 mb-4 mb-md-2 pt-2 text-center">
-                <h4> Kontakt meg </h4>
+                <h4> Contact me </h4>
 
                 <div class="mt-4">
 
                     <!-- Linkedin -->
-                    <a class="btn btn-outline-light btn-floating m-1" tabindex="0" aria-label="link til min LinkedIn" href="https://www.linkedin.com/in/lise-mari-lorentzen" role="button" target="_blank" rel="noreferrer noopener">
+                    <a class="btn btn-outline-light btn-floating m-1" tabindex="0" aria-label="external link to my LinkedIn account"
+                       href="https://www.linkedin.com/in/lise-mari-lorentzen" role="button" target="_blank" rel="noreferrer noopener">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
 
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" tabindex="0" aria-label="link til min GitHub" href="https://github.com/hodorwho" role="button" target="_blank" rel="noreferrer noopener">
+                    <a class="btn btn-outline-light btn-floating m-1" tabindex="0" aria-label="external link to my GitHub account"
+                       href="https://github.com/hodorwho" role="button" target="_blank" rel="noreferrer noopener">
                         <i class="fa-brands fa-github"></i>
                     </a>
-
-                    <!-- Mail
-                    <a class="btn btn-outline-light btn-floating m-1" tabindex="0" aria-label="link til min E-post" href="mailto:lisemarilorentzen@gmail.com" role="button">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a> -->
                 </div>
             </div>   <!--column 2-->
         </div>   <!-- row-->
     </footer>
 </div>
 
-<!--- //popper and js modules --->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
-
 <!-- scripts: javascript-filen og GSAP (til animasjon) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="application/javascript" src="animations.js"> </script>
+<!--- //popper and js modules --->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
 
 </html>
